@@ -13,6 +13,7 @@ function getPeopleInfo(url) {
   return fetch(url)
     .then(response => response.json())
     .then(data => {
+      console.log(data.results);
       galleryHTML(data.results);
       modalAppear(data.results);
     })
@@ -41,13 +42,14 @@ It also makes the button "clickable" and removes the modal when clicked*/
 
 function modalHTML(personData) {
   //Formatting Birthday below
+
   let birthday = new Date(personData.dob.date);
   let newBirthday =
-    ("0" + (birthday.getMonth() + 1)).slice(-2) +
+    ("0" + (birthday.getUTCMonth() + 1)).slice(-2) +
     "/" +
-    ("0" + birthday.getDate()).slice(-2) +
+    ("0" + birthday.getUTCDate()).slice(-2) +
     "/" +
-    birthday.getFullYear();
+    birthday.getUTCFullYear();
 
   //Formatting Phone Number below
   let phone = personData.phone;
