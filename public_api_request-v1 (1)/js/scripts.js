@@ -1,4 +1,4 @@
-//API that has 12 results
+//API returns has 12 results
 randomPeopleUrl = "https://randomuser.me/api/?results=12&nat=us";
 
 //Select element that will be used to insert HTML elements created dynamically
