@@ -1,3 +1,5 @@
+/*TechDegree Project 5: Public API Request*/
+
 //API returns has 12 results
 randomPeopleUrl = "https://randomuser.me/api/?results=12&nat=us";
 
@@ -33,7 +35,7 @@ function galleryHTML(data) {
   });
 }
 
-/*Function below does a few things - it reformats both the phone number and Birthday.
+/*Function below does a few things - it reformats both the phone number and birthday.
 It also creates the modal HTML when the date is passed from the modalAppear function
 It also makes the button "clickable" and removes the modal when clicked*/
 
@@ -71,7 +73,7 @@ function modalHTML(personData) {
       </div>`;
   galleryDiv.insertAdjacentHTML("afterend", modal);
 
-  //Below we select the button and remove the modal once it's clicked
+  //Below we select the button and remove the modal once button is clicked
   const button = document.querySelector("#modal-close-btn");
   const modalContainer = document.querySelector(".modal-container");
 
@@ -84,6 +86,7 @@ function modalHTML(personData) {
  and when one of those cards is clicked the modalHTML is called and passed
  the data pertaining to that specific person to display
  */
+
 function modalAppear(modalData) {
   const cards = document.querySelectorAll(".card");
   for (let i = 0; i < cards.length; i += 1) {
@@ -93,5 +96,4 @@ function modalAppear(modalData) {
   }
 }
 
-//Invoking first function below
 getPeopleInfo(randomPeopleUrl);
