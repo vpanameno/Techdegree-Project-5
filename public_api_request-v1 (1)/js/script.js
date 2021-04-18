@@ -1,6 +1,6 @@
 /*TechDegree Project 5: Public API Request*/
 
-//API returns has 12 results
+//API returns 12 results
 randomPeopleUrl = "https://randomuser.me/api/?results=12&nat=us";
 
 //Select element that will be used to insert HTML elements created dynamically
@@ -74,7 +74,7 @@ function modalHTML(personData) {
       </div>`;
   galleryDiv.insertAdjacentHTML("afterend", modal);
 
-  //Below we select the button and remove the modal once button is clicked
+  //Below we select the button and remove the modal once 'x' button is clicked
   const button = document.querySelector("#modal-close-btn");
   const modalContainer = document.querySelector(".modal-container");
 
